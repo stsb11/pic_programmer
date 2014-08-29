@@ -14,7 +14,7 @@
 <a href="GITHUB URL HERE">Fork me on GitHub</a>
 </div>
 <center>
-<img src='img/pic2.jpg' width=33%>
+<img src='img/pic3.jpg' width=33%>
 </center>
 #+END_HTML
 
