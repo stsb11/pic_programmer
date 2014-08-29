@@ -1,0 +1,111 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: PCB Programming Challenges
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/pic_project">Fork me on GitHub</a>
+</div>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Program Challenges
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+With our fully working board, we can now write some programs to make perform different tasks for us. Create each of the following programs (they get trickier as you go along), and save each one seperately.
+** Tasks
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+Program your PCB, so that it...
+- is a metronome. Every second, the LEDs flash on and off for 0.1s to help a pianist keep time while practicing.
+- is a disco light. The LEDs flash repeatedly in a pattern. Bonus marks if the pattern changes when the light level drops.
+- is a child's nightlight. The LEDs come on when it gets a bit darker than the room you're in.
+- is a Survival light. The PCB flashes out SOS in Morse code when the LDR is covered up.
+- is an automatic floodlight. The first LED illuminates when it gets a little darker than the room, the second LED as well when it gets darker still, and the third LED when it is very dark.
+- is a torch. The LEDs all come on when someone puts their finger on the LDR momentarily, and turns them off again when they "push" the LDR a second time.
+- is a toothbrush timer. When triggered by someone passing their hand over the LDR, use the LEDs to indicate to a child when two minutes have elapsed, to help them brush their teeth thoroughly.
+** Free choice
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Create a scenario (like I did in the toothbrush task), and write a program for it.
+* Assessment Point
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Assessment Point
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- On your portfolio, add (cropped) screenshots of your working programs, and write a few sentences describing how it works.
+- On your customised program, explain the scenario briefly, and explain how the code works.
+- You can now put your favourite program on it, and take your PCB home. Well done! 
+[[file:index.html][Return to homepage]]

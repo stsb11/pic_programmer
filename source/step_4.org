@@ -1,0 +1,120 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: PIC to PC Communication
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/pic_project">Fork me on GitHub</a>
+</div>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* First Program
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+We've now got a working PCB that we can write software for. In this stage, we'll test some programs. 
+** Pushing a program to a PIC chip.
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+- Load Circuit Wizard, then open your FirstPIC.cwz program while your PCB is connected to the computer. Click the "Run Live" button, and your program will be uploaded after a few seconds. You can then unplug your PCB from the computer and remove the download cable. Whenever the PCB is powered up, it'll make the LEDs blink on and off.
+
+** Debugging a program
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+- Connect the PCB back up to the computer, so it is connected in Circuit Wizard. Click "Debug Live", then the "Start" button.
+- Ignore what's happening on the left-hand side of the screen for a moment, and click on the option that says, "View several panels at once".
+- In debug mode, you can monitor exactly what your Genie chip is doing, and which instruction it is running in real-time. 
+- You can also see which inputs and outputs are turned on, and use this information to help fix any issues (bugs) in your code.
+- The jog-wheel (shown as a circle just above the "Close" button allows you to slow the speed at which the program runs. This can be handy when there's a lot going on. Try this now.
+- Remember that while you are debugging, you won't be able to control the left-most LED, which will blink constantly while you are working. As soon as your PCB isn't connected to the computer, it will behave as it should, though.
+* Analogue programming
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Calibrate It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+- Load up your "my analogue program.cwz" work that you produced in step 1.
+- Using the figures you obtained in step 3, modify the values of your analogue decision diamonds to make your program work.
+- You might want to use the "Calibrate Sensor" option again. Double-check that the mode is set to "2 inputs, 3 outputs (G0-G2)".
+- You might want to use the "Debug Live" feature to make sure the program is behaving how you expect before running live. 
+* Assessment Point
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Assessment Point
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- On your portfolio, add screenshots of your working analogue program, and write a few sentences describing how you modified your program, and the steps you took to ensure it worked correctly.
+[[file:index.html][Return to homepage]]
