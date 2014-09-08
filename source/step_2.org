@@ -86,7 +86,7 @@ In the last lesson, you looked at the theory of how the circuit works, and wrote
 :END:
 - Now, we'll start to build your actual PCB. Start by getting the PIC Programmer PCB, and get the resistors and an 8-pin chip carrier.
 - Solder the resistors in, using the correct soldering technique.
-- You'll notice there's a notch in one side. You'll notice a matching notch on the outline of the chip carrier on the PCB (labelled 'C08'). Solder this into the board the right way up, and take care to ensure none of the solder pads get soldered to one another (called a **solder bridge**), or leaving a pad so that the drill-hole is still visible (called a **dry joint**).
+- Now look at your chip carrier. You'll notice there's a notch in one side. You'll notice a matching notch on the outline of the chip carrier on the PCB (labelled 'C08'). Solder this into the board the right way up, and take care to ensure none of the solder pads get soldered to one another (called a **solder bridge**), or leaving a pad so that the drill-hole is still visible (called a **dry joint**).
 - The picture below shows the soldering faults described above. 
 file:img/faults.jpg]]
 

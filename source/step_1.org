@@ -134,7 +134,7 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
-- Try and either modify your program or answer the questions below on a Word document. You'll be saving this circuit in your home drive later.
+- Try and modify your program and answer the questions below on a Word document. You'll be saving this circuit in your home drive later.
 - Make the LED blink on and off twice as quickly.
 - Why are there two wait shapes, and not just one?
 - Modify your program, so that it comes on for 2s, off for 1s, on for 1s and off for 2s before repeating.
