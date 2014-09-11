@@ -199,7 +199,7 @@ Save your work as "Analogue PIC.cwz".
 [[file:img/step_12.png]]
 - Note the values I used on the decision diamonds.
 - Make sure with your output parallelograms that you turn off any outputs that aren't being turned on
-- (e.g. in the bottom-left shape, I turned output 0 on, and also turned off outputs 1 and 2). 
+- (e.g. in the bottom-left shape, I turned output 0 on, and also turned off outputs 2 and 4). 
 - Test your program when finished, and see how changing the light level affects how many LEDs are turned on.
 ** Try It
 :PROPERTIES:
