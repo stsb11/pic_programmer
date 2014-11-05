@@ -238,9 +238,29 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>Whether its an LED or a PIC chips, the first thing that electronic components need is power, and a connection to ground. Circuit Wizard simplifies this for us by showing each of the 8 legs of the PIC (known as pins) in a different order to how they really are. This makes drawing the initial circuit easier. In this case, Power has been drawn by itself at the top of the chip, and the ground pin (the negative end of a battery) is at the bottom.
 </li>
-<li>Inputs are placed to the left of the PIC chip. We're not going to worry about these for now.
+<li>When designing PIC circuits, Inputs are placed to the left of the PIC chip. We're not going to worry about these for now.
 </li>
-<li>Outputs are placed to the right of the PIC chip. In the project you're making, you'll actually use 3 LEDs, connected to the other output pins. For now, we can just leave them empty.
+<li>Outputs are placed to the right of the PIC chip. In the project you're making, you'll actually use 3 LEDs, connected to the other output pins. For now, we can just leave outputs 2 and 4 empty.
+</li>
+<li>One of great things about the Genie C08 PIC is that you can change the configuration of the pins; with this particular project, we'll be using pins 0, 1 and 2 for outputs, and pin 4 for our input. This is because when the PCB was designed, using this arrangement allowed us to make the PCB smaller with this setup. 
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/rclick.png" alt="rclick.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>To change the configuration, start by <b>right-clicking</b> on the Genie chip in Circuit Wizard. From the menu that appears, then choose <b>Program</b> and then <b>Program settings</b>. 
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/changepins.png" alt="changepins.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>At the bottom of the window that appears, click the drop-down list, and choose the option that says, "<b>2 inputs, 3 outputs (G0-G2)</b>". Now click "Ok". 
 </li>
 <li>Try and run the circuit. You'll see an error message, and the screen will change to show you a green flowchart symbol with the word, "Start" in it. This is because the PIC chip needs you to give it instructions as to what you'd like it to do. Using shapes located on the right-hand side of the screen and experimenting with clicking near the shapes you've drawn, create the following flowchart. We're going to make the LED blink on and off.
 </li>
@@ -313,7 +333,7 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>Our PIC so far is quite limited. While its great that it can flash in patterns (it could signal SOS in <a href="http://en.wikipedia.org/wiki/Morse_code">Morse</a> code), but PICs become more powerful when they can interact with the World around them.
 </li>
-<li>Modify your circuit diagram to add a PTM (Push to Make) switch and 10k resistor, as shown in the screenshot below. Make sure you connect the bottom of the switch to input 1 on the PIC.
+<li>Modify your circuit diagram to add a PTM (Push to Make) switch and 10k resistor, as shown in the screenshot below. Make sure you connect the bottom of the switch to input 3 on the PIC.
 </li>
 </ul>
 
@@ -335,7 +355,7 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>Connect the flow lines as shown in the picture above, then go back to your circuit and run it. Click on the switch to see what happens.
 </li>
-<li>Now go back to the flowchart and click play. While the simulation is running, you can click once on the diamond, and simulate pushing button 1 from there.
+<li>Now go back to the flowchart and click play. While the simulation is running, you can click once on the diamond, and simulate pushing button 3 from there.
 </li>
 </ul>
 </div>
@@ -348,7 +368,7 @@ for the JavaScript code in this tag.
 </li>
 <li>Change it again, so that when you push and hold the button, it flashes on and off slowly. When the button is released, make it flash quickly.
 </li>
-<li>Add two more LEDs to your circuit diagram, and make a note of which output pin they're connected to. You can change their colour by double-clicking them. Make output 0 red, output 2 amber and output 4 green.
+<li>Add two more LEDs to your circuit diagram, and make a note of which output pin they're connected to. You can change their colour by double-clicking them. Make output 0 red, output 1 amber and output 2 green.
 </li>
 <li>Write a program that makes each of the LEDs come on for 2s at a time while the button is held down. When released, they should all turn off.
 </li>
@@ -378,20 +398,28 @@ for the JavaScript code in this tag.
 </li>
 <li>Modify your circuit diagram, by swapping the PTM switch for an LDR (found in the Sensors section of Input Components in Circuit Wizard).
 </li>
+<li><span class="underline"><b>NOTE:</b></span> The LDR is connected to input 4. This is because an LDR is an analogue component, so needs to be connected to an input that can accept it (notice the /A after G4 in the picture below). 
+</li>
 </ul>
-<p>
-<img src="img/step_6.png" alt="step_6.png" />
-Your circuit should now look something like the picture above (except without the LEDs lit).
+
+<div class="figure">
+<p><img src="img/step_6.png" alt="step_6.png" />
 </p>
+</div>
 <ul class="org-ul">
+<li>Your circuit should now look something like the picture above.
+</li>
 <li>Lets look at the results of this work. Click the 'play' button to run the circuit, then click the text saying, 'View the analogue sensor readings' which can be seen on the far right-hand side of the circuit wizard window, about half-way down the screen.
 </li>
 </ul>
-<p>
-<img src="img/step_7.png" alt="step_7.png" />
-Your screen should look the same as shown above. If you now click once on the LDR symbol on the circuit diagram, you can simulate a change in light level by dragging 
+
+<div class="figure">
+<p><img src="img/step_7.png" alt="step_7.png" />
 </p>
+</div>
 <ul class="org-ul">
+<li>Your screen should look the same as shown above. If you now click once on the LDR symbol on the circuit diagram, you can simulate a change in light level by dragging 
+</li>
 <li>We can now be a little more flexible about how our programs work. With a digital switch, we're no longer limited to "is it on?". We could program our chip to work as a light meter, for instance. 
 </li>
 </ul>
@@ -420,9 +448,7 @@ Save your work as "Analogue PIC.cwz".
 <ul class="org-ul">
 <li>Note the values I used on the decision diamonds.
 </li>
-<li>Make sure with your output parallelograms that you turn off any outputs that aren't being turned on
-</li>
-<li>(e.g. in the bottom-left shape, I turned output 0 on, and also turned off outputs 2 and 4). 
+<li>Make sure with your output parallelograms that you turn off any outputs that aren't being turned on. For instance, in the bottom-left shape, I turned output 0 on, and also turned off outputs 1 and 2. 
 </li>
 <li>Test your program when finished, and see how changing the light level affects how many LEDs are turned on.
 </li>
@@ -463,7 +489,7 @@ On your portfolio, answer the following questions:
 </li>
 <li>In programming, what is meant by the term, "loop"? Why is is often advantageous to have programs use these, rather than running through their code from top to bottom?
 </li>
-<li>Write down the purpose of each pin on a Genie C08. E.g. Pin 1 - Power, Pin 2 -&#x2026; etc.
+<li>Write down the purpose of each pin on a Genie C08. E.g. Pin 1 - Power, Pin 2 -&#x2026; etc. You can find out most of these by hovering the mouse over the pins in Circuit Wizard, but for some, you'll need to explore the Circuit Wizard help files. 
 </li>
 </ul>
 <p>

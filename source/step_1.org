@@ -112,8 +112,13 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 - Open up Circuit Wizard, and create the following circuit layout. The Genie C08 chip can be found in the "Microcontrollers" drop-down menu item.
 [[file:img/step_1.png]]
 - Whether its an LED or a PIC chips, the first thing that electronic components need is power, and a connection to ground. Circuit Wizard simplifies this for us by showing each of the 8 legs of the PIC (known as pins) in a different order to how they really are. This makes drawing the initial circuit easier. In this case, Power has been drawn by itself at the top of the chip, and the ground pin (the negative end of a battery) is at the bottom.
-- Inputs are placed to the left of the PIC chip. We're not going to worry about these for now.
-- Outputs are placed to the right of the PIC chip. In the project you're making, you'll actually use 3 LEDs, connected to the other output pins. For now, we can just leave them empty.
+- When designing PIC circuits, Inputs are placed to the left of the PIC chip. We're not going to worry about these for now.
+- Outputs are placed to the right of the PIC chip. In the project you're making, you'll actually use 3 LEDs, connected to the other output pins. For now, we can just leave outputs 2 and 4 empty.
+- One of great things about the Genie C08 PIC is that you can change the configuration of the pins; with this particular project, we'll be using pins 0, 1 and 2 for outputs, and pin 4 for our input. This is because when the PCB was designed, using this arrangement allowed us to make the PCB smaller with this setup. 
+[[./img/rclick.png]]
+- To change the configuration, start by *right-clicking* on the Genie chip in Circuit Wizard. From the menu that appears, then choose *Program* and then *Program settings*. 
+[[./img/changepins.png]]
+- At the bottom of the window that appears, click the drop-down list, and choose the option that says, "*2 inputs, 3 outputs (G0-G2)*". Now click "Ok". 
 - Try and run the circuit. You'll see an error message, and the screen will change to show you a green flowchart symbol with the word, "Start" in it. This is because the PIC chip needs you to give it instructions as to what you'd like it to do. Using shapes located on the right-hand side of the screen and experimenting with clicking near the shapes you've drawn, create the following flowchart. We're going to make the LED blink on and off.
 [[file:img/step_2.png]]
 - If you had to guess, you could probably figure out that instructions are followed starting from "Start", and following the arrows to the bottom, before being started all over again endlessly. If you've tried to run the program, you'll see that its still not sure what you'd like it to do. 
@@ -150,20 +155,20 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 :HTML_CONTAINER_CLASS: design
 :END:
 - Our PIC so far is quite limited. While its great that it can flash in patterns (it could signal SOS in [[http://en.wikipedia.org/wiki/Morse_code][Morse]] code), but PICs become more powerful when they can interact with the World around them.
-- Modify your circuit diagram to add a PTM (Push to Make) switch and 10k resistor, as shown in the screenshot below. Make sure you connect the bottom of the switch to input 1 on the PIC.
+- Modify your circuit diagram to add a PTM (Push to Make) switch and 10k resistor, as shown in the screenshot below. Make sure you connect the bottom of the switch to input 3 on the PIC.
 [[file:img/step_4.png]]
 - If you run your circuit now, you'll see that clicking the button doesn't change the way the program behaves. This is because we've not told the PIC what we'd like to do yet.
 - Go back to your Flowchart, and add a "Digital" diamond to the top of the program, as shown in the picture below. Double-click the diamond, and set it to check if input 1 is turned on.
 [[file:img/step_5.png]]
 - Connect the flow lines as shown in the picture above, then go back to your circuit and run it. Click on the switch to see what happens.
-- Now go back to the flowchart and click play. While the simulation is running, you can click once on the diamond, and simulate pushing button 1 from there.
+- Now go back to the flowchart and click play. While the simulation is running, you can click once on the diamond, and simulate pushing button 3 from there.
 ** Coding time
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
 - Modify the program so that pushing the button and holding it down turns on the LED, and releasing it turns it off. Save this as "PIC Torch.cwz"
 - Change it again, so that when you push and hold the button, it flashes on and off slowly. When the button is released, make it flash quickly.
-- Add two more LEDs to your circuit diagram, and make a note of which output pin they're connected to. You can change their colour by double-clicking them. Make output 0 red, output 2 amber and output 4 green.
+- Add two more LEDs to your circuit diagram, and make a note of which output pin they're connected to. You can change their colour by double-clicking them. Make output 0 red, output 1 amber and output 2 green.
 - Write a program that makes each of the LEDs come on for 2s at a time while the button is held down. When released, they should all turn off.
 - You can turn on multiple LEDs at once. Modify the code so that when the button is pushed, they simulate a set of [[http://www.drivingtesttips.biz/traffic-lights-sequence.html][traffic lights]] (make then change once every 2s). Save this as "PIC-traffic.cwz".
 - Congratulations! This program (or any of the others you've made) could be put straight onto the circuit you're going to make in your practical sessions.
@@ -180,11 +185,12 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 - Some input components are analogue. This means they can have a range of different values, like a [[http://en.wikipedia.org/wiki/Photoresistor][LDR]] or [[http://en.wikipedia.org/wiki/Thermistor][thermistor]].
 - LDRs work because their resistance increases as it gets darker, and when connected to an analogue input on a PIC chip, this can be read as a number between 0 (very dark) and 255 (extremely bright).
 - Modify your circuit diagram, by swapping the PTM switch for an LDR (found in the Sensors section of Input Components in Circuit Wizard).
+- _*NOTE:*_ The LDR is connected to input 4. This is because an LDR is an analogue component, so needs to be connected to an input that can accept it (notice the /A after G4 in the picture below). 
 [[file:img/step_6.png]]
-Your circuit should now look something like the picture above (except without the LEDs lit).
+- Your circuit should now look something like the picture above.
 - Lets look at the results of this work. Click the 'play' button to run the circuit, then click the text saying, 'View the analogue sensor readings' which can be seen on the far right-hand side of the circuit wizard window, about half-way down the screen.
 [[file:img/step_7.png]]
-Your screen should look the same as shown above. If you now click once on the LDR symbol on the circuit diagram, you can simulate a change in light level by dragging 
+- Your screen should look the same as shown above. If you now click once on the LDR symbol on the circuit diagram, you can simulate a change in light level by dragging 
 - We can now be a little more flexible about how our programs work. With a digital switch, we're no longer limited to "is it on?". We could program our chip to work as a light meter, for instance. 
 ** Save It
 :PROPERTIES:
@@ -198,8 +204,7 @@ Save your work as "Analogue PIC.cwz".
 - Using the analogue diamond shape in Circuit Wizard, create the following program...
 [[file:img/step_12.png]]
 - Note the values I used on the decision diamonds.
-- Make sure with your output parallelograms that you turn off any outputs that aren't being turned on
-- (e.g. in the bottom-left shape, I turned output 0 on, and also turned off outputs 2 and 4). 
+- Make sure with your output parallelograms that you turn off any outputs that aren't being turned on. For instance, in the bottom-left shape, I turned output 0 on, and also turned off outputs 1 and 2. 
 - Test your program when finished, and see how changing the light level affects how many LEDs are turned on.
 ** Try It
 :PROPERTIES:
@@ -222,5 +227,5 @@ On your portfolio, answer the following questions:
   - What are the advantages of using PIC chips over traditional circuit design?
   - Giving examples, explain the difference between analogue and digital input components.
   - In programming, what is meant by the term, "loop"? Why is is often advantageous to have programs use these, rather than running through their code from top to bottom?
-  - Write down the purpose of each pin on a Genie C08. E.g. Pin 1 - Power, Pin 2 -... etc.
+  - Write down the purpose of each pin on a Genie C08. E.g. Pin 1 - Power, Pin 2 -... etc. You can find out most of these by hovering the mouse over the pins in Circuit Wizard, but for some, you'll need to explore the Circuit Wizard help files. 
 [[file:index.html][Return to homepage]]
