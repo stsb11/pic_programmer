@@ -1,0 +1,25 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: PIC License Assessment
+
+* Badge-It Tasks
+| <20>                 | <20>                 | <20>                 | <20>                 |
+| Task                 | Silver               | Gold                 | Platinum             |
+|----------------------+----------------------+----------------------+----------------------|
+| **PIC Knowledge**    | Explain what a PIC is, and why they can be useful |                      |                      |
+|----------------------+----------------------+----------------------+----------------------|
+| **PIC Circuit Design** | Design a PIC Circuit using software |                      | Design and program an original PIC circuit |
+|----------------------+----------------------+----------------------+----------------------|
+| **PIC Programming**  | Code 3 of the PIC Programming scenarios | Code 5 of the PIC Programming scenarios | Code all 7 of the PIC Programming Scenarios |
+|----------------------+----------------------+----------------------+----------------------|
+| **Advanced programming** | Demonstrate the use of analogue **AND** digital inputs when writing code | Design a new scenario, and write a PIC program for it |                      |
+|----------------------+----------------------+----------------------+----------------------|
+| **Circuit Manufacture** | Solder together a working PCB | Solder together the license, demonstrating good technique and with all components well mounted on the board. | Solder together the board, with immaculate soldering technique and all components sited perfectly on the board. |
+|----------------------+----------------------+----------------------+----------------------|
+| **Connectivity**     |                      | Independently upload an original program to a PIC, and test it works. | Write a PIC program in GenieBASIC |

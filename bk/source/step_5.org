@@ -105,7 +105,7 @@ Program your PCB, so that it...
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Take (cropped) screenshots of your individual working programs, and write a few sentences describing how it works in a text document. Upload each picture and text document seperately.
+- On your portfolio, add (cropped) screenshots of your working programs, and write a few sentences describing how it works.
 - On your customised program, explain the scenario briefly, and explain how the code works.
 - You can now put your favourite program on it, and take your PCB home. Well done! 
 [[file:index.html][Return to homepage]]

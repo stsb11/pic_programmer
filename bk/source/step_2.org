@@ -147,5 +147,5 @@ SCHEDULED: <2014-07-11 Fri>
 :HTML_CONTAINER_CLASS: badge
 :END:
 - Take pictures of the following, for inclusion in your portfolio: PCB (front), PCB (back), Download cable and power cable.
-- Upload your photos and then create a text document describing your soldering technique, briefly stating what you feel is good about your work, and identifying something you'd like to improve. Upload the text document.
+- Add these to your portfolio, describing your soldering technique, briefly stating what you feel is good about your work, and identifying something you'd like to improve.
 [[file:index.html][Return to homepage]]

@@ -223,7 +223,7 @@ Save your work as "Analogue PIC.cwz".
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: design
 :END:
-Create a text document and answer the following questions:
+On your portfolio, answer the following questions:
   - What are the advantages of using PIC chips over traditional circuit design?
   - Giving examples, explain the difference between analogue and digital input components.
   - In programming, what is meant by the term, "loop"? Why is is often advantageous to have programs use these, rather than running through their code from top to bottom?

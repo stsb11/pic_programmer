@@ -116,6 +116,5 @@ We've now got a working PCB that we can write software for. In this stage, we'll
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Take screenshots of your working analogue program, and write a few sentences describing how you modified your program, and the steps you took to ensure it worked correctly in a text document. Upload these pictures and the text document.
-- For the platinum task, write the same analogue program in GenieBasic. A video tutorial is available on the open drive on how to do this. Click the link [[\\brgradellnas\open$\Systems%20and%20Control\Year%208\PIC%20Licence][here]] to go to the file with the video. 
+- On your portfolio, add screenshots of your working analogue program, and write a few sentences describing how you modified your program, and the steps you took to ensure it worked correctly.
 [[file:index.html][Return to homepage]]

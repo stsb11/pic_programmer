@@ -1,0 +1,140 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: Board Testing
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/pic_programmer">Fork me on GitHub</a>
+</div>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* PCB Testing
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+By this point, you should have a fully soldered together PCB (with a chip), a download socket and a method of providing 3V to the circuit. In this lesson, we'll test our PCB to ensure its working.
+** Hardware Test
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+- When a PIC chip initially boots (starts) up, it briefly pulses output 0, which we happen to have an LED connected to.
+- Connect the 0V (negative) pin of your power connector to the PCB, then connect the positive power pin to the PCB while looking at the LEDs on the board.
+- If the left-hand LED (red in my examples) flashes for a split-second, then your Genie chip is receiving power, and at least one of your LEDs is working.
+- If it doesn't, then something isn't right. You might have dry joints, you could have made a solder bridge, the power connectors might be backwards, the batteries could be flat or the Genie chip might be upside down. Make sure your LED pulses before you move on to the next step.
+* PC Connectivity Test
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Connect It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+- We can now test the remainder of the PCB and your download cable by connecting your board to Circuit Wizard. You'll need a USB Genie Download cable from the teacher to do this.
+- Plug the download cable into the computer BEFORE you load Circuit Wizard, then wait 10s for the computer to connect to it, and load Circuit Wizard.
+- Check that the download cable is recognised by the computer (this is the single most common cause of problems!) by clicking "Project -> Options -> Control", and ensuing that the settings look something like this
+[[file:img/dl_settings.jpg]]
+- If the cable is working correctly, you'll see a little red icon in the drop-down list, with the words "USB to serial port" next to it. The COM number doesn't matter (mine is on COM3, but yours might be COM6, for instance). Whichever port has the icon is the one you need to select. 
+- Connect power to the PCB, then connect your home-made download socket to the three SIL header pins in the top right-hand corner of your board. The order is important...
+[[file:img/dl_conns.jpg]]
+- You can now plug your Genie cable into the download socket. If you've done everything correctly, the right-hand side of the Circuit Wizard should now show you a "Connected GENIE C08" message, and the bottom-left LED should blink continously as data is exchanged between the PC and your circuit. Congratulations! 
+- If it hasn't come up as connected, there are a few reasons this could be:
+  + Check with a multimeter that there is 3V across pins 1 and 8.
+  + Check that the pins going into the download socket are in the right order. I used black, grey and white in mine, but yours are likely to be different. Is there a 22k resistor on your download socket?
+  + Is Circuit Wizard 'seeing' the download cable? Double-check the PC settings. Try plugging someone elses' (working) PCB into your computer with your power supply.
+  + Check that the 100k and 22k resistors are working correctly by using the resistance setting on a multimeter.
+
+* I/O Test
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Test it
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+- Now that the PCB is connected to the computer, we can test the input (i.e. the LDR) and output components (i.e. the LEDs) using Circuit Wizard, before we start writing software. This will also afford us the opportunity to get some calibration data for your LDR.
+- When connected to your PCB, the right-hand side of the Circuit Wizard window will show you a number of options...
+[[file:img/cwz_conn.jpg]]
+- We'll check the LEDs first, so will use the "Control Device" option. Click this, and then set the "Mode" of your chip to "2 Inputs, 3 Outpus (G0-G2)". 
+- You can now turn on and off the LEDs by clicking the relevant output, near the "OUT" label. 
+- Note: Because it is used to communicate with the PC, you can't control G0 from this screen. The fact that the LED is blinking constantly confirms it works, though. 
+- Once you're happy that your LEDs work, click the "Cancel" button. We're now going to test the LDR is working properly.
+- Choose "Calibrate sensor" from the right-hand menu. You'll see a numeric value between 0-255, which in this case represents the light level where you are. By covering and uncovering the sensor, you should see the value change, proving that your LDR is working correctly.
+- Make a note somewhere of what value the LDR gives under standard classroom lighting, and the value when it is covered up. This will be vital later in getting your programs to work.
+* Assessment Point
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- On your portfolio, add screenshots of both your Analogue sensor under light and dark conditions.
+- Take a picture of your PCB connected to your computer. Try and take one while the status LED (the left-hand one) is illuminated.
+[[file:index.html][Return to homepage]]
