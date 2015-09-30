@@ -97,7 +97,7 @@ file:img/faults.jpg]]
 - The SIL (Single In-Line) header pins come in strips of about 20 pins. Use a side-cutter to break off 2 and 3 pins, then solder them in carefully.
 - The LDR is non-polarised, so can be mounted either way round.
 - Try and keep all your components flat to the board, so that they're not sticking up in the air.
-[[file:img/soldered.jpg]]
+[[./img/soldering1.jpg]]
 - When you're finished, your board should look something like the image above. 
 - You can now see your teacher for a Genie C08 chip, which you can insert into the chip holder. 
 - NOTE: Make sure the right way up, by ensuring that the notch in the Genie chip lines up with the notch on the chip carrier.
