@@ -14,7 +14,7 @@
 <a href="https://github.com/stsb11/pic_programmer">Fork me on GitHub</a>
 </div>
 <center>
-<img src='img/pic3.jpg' width=33%>
+<img src='img/pic4.jpg' width=33%>
 </center>
 #+END_HTML
 
