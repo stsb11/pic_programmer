@@ -1,5 +1,5 @@
 #+STARTUP:indent
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="pages/css/styles.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil  toc:nil
 #+TITLE: PIC Programmer
@@ -7,13 +7,11 @@
 
 
 #+BEGIN_HTML
-<div class="github-fork-ribbon-wrapper left">
-    <div class="github-fork-ribbon">
-        <a href="https://github.com/stsb11/pic_programmer">Fork me on GitHub</a>
-    </div>
+<div class=ribbon>
+<a href="https://github.com/stsb11/pic_programmer">Fork me on GitHub</a>
 </div>
 <center>
-<img src=./source/img/pic4.jpg width=20%>
+<img src='img/pic4.jpg' width=33%>
 </center>
 #+END_HTML
 
